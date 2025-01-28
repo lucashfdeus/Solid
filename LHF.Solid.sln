@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Solid.Business", "src\LHF.Solid.Business\LHF.Solid.Business.csproj", "{64CC2B59-2858-46FA-9858-472E3EC25DF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Solid.Data", "src\LHF.Solid.Data\LHF.Solid.Data.csproj", "{AB0AAEE1-8A62-4B4F-9EE2-65930F7095D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Solid.Api", "src\LHF.Solid.Api\LHF.Solid.Api.csproj", "{8A36AE1B-0881-4AE4-B3A8-FA148021F75A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64CC2B59-2858-46FA-9858-472E3EC25DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CC2B59-2858-46FA-9858-472E3EC25DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CC2B59-2858-46FA-9858-472E3EC25DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CC2B59-2858-46FA-9858-472E3EC25DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0AAEE1-8A62-4B4F-9EE2-65930F7095D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0AAEE1-8A62-4B4F-9EE2-65930F7095D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0AAEE1-8A62-4B4F-9EE2-65930F7095D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0AAEE1-8A62-4B4F-9EE2-65930F7095D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A36AE1B-0881-4AE4-B3A8-FA148021F75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A36AE1B-0881-4AE4-B3A8-FA148021F75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A36AE1B-0881-4AE4-B3A8-FA148021F75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A36AE1B-0881-4AE4-B3A8-FA148021F75A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

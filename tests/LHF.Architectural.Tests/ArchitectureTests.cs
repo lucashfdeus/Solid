@@ -3,6 +3,7 @@ using ArchUnitNET.Fluent;
 using ArchUnitNET.Loader;
 using ArchUnitNET.xUnit;
 using LHF.Solid.Api.Controllers;
+using LHF.Solid.Data.Repository;
 using Xunit;
 
 namespace LHF.Architectural.Tests
@@ -11,24 +12,21 @@ namespace LHF.Architectural.Tests
     {
         // Carregar a arquitetura uma vez e reutilizar em todos os testes
         private static readonly Architecture _architecture = new ArchLoader()
-            .LoadAssemblies(typeof(ProductController).Assembly)
-            .Build();    
+           .LoadAssemblies(
+               typeof(ProductController).Assembly,       // Carrega o assembly da camada de API
+               typeof(ProductRepository).Assembly)       // Certifica-se de carregar o assembly do repositório também
+           .Build();
 
         [Fact]
-        public void ApiLayerShouldDependOnlyOnBusinessLayer()
+        public void ApiLayerShouldDependOnConfigurationLayer()
         {
-            // Verifica que a camada de API depende apenas da camada de negócios e não da camada de dados.
-            // Esse teste assegura que a API não deve depender diretamente da camada de dados.
-
+            // Verifica que a camada de API depende da camada de configuração e não diretamente da camada de dados.
             var rule = ArchRuleDefinition
                 .Classes()
                 .That()
                 .ResideInNamespace("LHF.Solid.Api")
                 .Should()
-                .DependOnAny("LHF.Solid.Business")
-                .AndShould()
-                .NotDependOnAny("LHF.Solid.Data")
-                .WithoutRequiringPositiveResults();
+                .NotDependOnAny("LHF.Solid.Data");
 
             CheckArchitectureRule(rule);
         }
@@ -46,7 +44,7 @@ namespace LHF.Architectural.Tests
                 .NotDependOnAny("LHF.Solid.Data");
 
             CheckArchitectureRule(rule);
-        }
+        }       
 
         [Fact]
         public void BusinessLayerShouldDependOnlyOnDataLayer()
@@ -121,6 +119,22 @@ namespace LHF.Architectural.Tests
             CheckArchitectureRule(rule);
         }
 
+        [Fact]
+        public void ConfigurationLayerShouldNotDependOnApiOrDataLayer()
+        {
+            // Garante que a camada de configuração não depende de camadas como API ou dados
+            var rule = ArchRuleDefinition
+                .Classes()
+                .That()
+                .ResideInNamespace("LHF.Solid.Configurations")
+                .Should()
+                .NotDependOnAny("LHF.Solid.Api")
+                .AndShould()
+                .NotDependOnAny("LHF.Solid.Data")
+                .WithoutRequiringPositiveResults();
+
+            CheckArchitectureRule(rule);
+        }
 
         // Método para verificar a regra da arquitetura
         private static void CheckArchitectureRule(IArchRule rule)

@@ -2,7 +2,7 @@ using LHF.Solid.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Registro das dependências
+// Usando o método de extensão de ServiceConfiguration
 builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();

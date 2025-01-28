@@ -11,12 +11,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LHF.Solid.Business\LHF.Solid.Business.csproj" />
-    <ProjectReference Include="..\LHF.Solid.Data\LHF.Solid.Data.csproj" />
+    <ProjectReference Include="..\LHF.Solid.Configurations\LHF.Solid.Configurations.csproj" />
   </ItemGroup>
 
 </Project>

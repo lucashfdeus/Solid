@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Solid.Api", "src\LHF.So
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Architectural.Tests", "tests\LHF.Architectural.Tests\LHF.Architectural.Tests.csproj", "{FFC31552-760C-4754-94E1-E2853E263242}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LHF.Solid.Configurations", "src\LHF.Solid.Configurations\LHF.Solid.Configurations.csproj", "{E8F15937-C3BD-4E4C-9B5D-CFFA72C9A03B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FFC31552-760C-4754-94E1-E2853E263242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC31552-760C-4754-94E1-E2853E263242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC31552-760C-4754-94E1-E2853E263242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F15937-C3BD-4E4C-9B5D-CFFA72C9A03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F15937-C3BD-4E4C-9B5D-CFFA72C9A03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F15937-C3BD-4E4C-9B5D-CFFA72C9A03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F15937-C3BD-4E4C-9B5D-CFFA72C9A03B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,13 +12,7 @@ namespace LHF.Architectural.Tests
         // Carregar a arquitetura uma vez e reutilizar em todos os testes
         private static readonly Architecture _architecture = new ArchLoader()
             .LoadAssemblies(typeof(ProductController).Assembly)
-            .Build();
-
-        // Método para verificar a regra da arquitetura
-        private static void CheckArchitectureRule(IArchRule rule)
-        {
-            rule.Check(_architecture);
-        }
+            .Build();    
 
         [Fact]
         public void ApiLayerShouldDependOnlyOnBusinessLayer()
@@ -125,6 +119,13 @@ namespace LHF.Architectural.Tests
                 .WithoutRequiringPositiveResults();
 
             CheckArchitectureRule(rule);
+        }
+
+
+        // Método para verificar a regra da arquitetura
+        private static void CheckArchitectureRule(IArchRule rule)
+        {
+            rule.Check(_architecture);
         }
     }
 }
